@@ -1,0 +1,39 @@
+@startuml
+
+left to right direction
+
+actor Пользователь as User
+actor Администратор as Admin
+actor СистемаУведомлений as Notify
+
+rectangle "Система управления задачами" {
+
+  usecase "Вход в систему" as Login
+  usecase "Создать проект" as CreateProject
+  usecase "Создать задачу" as CreateTask
+  usecase "Назначить исполнителя" as AssignTask
+  usecase "Изменить статус задачи" as ChangeStatus
+  usecase "Просмотреть задачи" as ViewTasks
+  usecase "Отправить уведомление" as SendNotification
+  usecase "Управление пользователями" as ManageUsers
+
+}
+
+User --> Login
+User --> CreateProject
+User --> CreateTask
+User --> AssignTask
+User --> ChangeStatus
+User --> ViewTasks
+
+Admin --> ManageUsers
+Admin --> ViewTasks
+Admin --> CreateProject
+
+Notify --> SendNotification
+
+CreateTask <|-- Login : <<include>>
+AssignTask <|-- CreateTask : <<include>>
+SendNotification <|-- ChangeStatus : <<extend>>
+
+@enduml
