@@ -23,7 +23,7 @@ flowchart TD
     OneRoot --> Output
     NoRoot --> Stop2([Конец])
     Output --> Stop2
-
+```
 ---
 
 # Ответы на контрольные вопросы
