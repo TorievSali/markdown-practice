@@ -69,4 +69,4 @@ HTML нужен для <details> или <kbd>.
 https://picsum.photos/id/100/200/100
 
 <details><summary>Спойлер</summary>HTML-вставка</details>
-🚀 ✅
+🚀 ✅ 🔥
